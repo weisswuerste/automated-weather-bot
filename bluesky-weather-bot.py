@@ -40,7 +40,7 @@ def timeAdjustments(sunrise, sunset):
     return date, sunrise_local, sunset_local
 
 def postToBsky(date, sunrise_local, temp, feels_like, climate, sunset_local):
-    bsky_post = f'Servus aus Tegernsee! \n\nDer Sonnenaufgang für Heute, {date}, war ungefähr {sunrise_local}. Und wie ist das Wetter? Ist alles ganz gut oder doch nicht ganz so? {climate} genau in diesem Moment mit einer Temperatur {temp}°C dass fühlt sich an wie {feels_like}°C. \n\nDer Sonnenuntergang wird ungefähr {sunset_local}. Für den Rest des Tages, genießen Sie das Sonnenlicht doch mal.'
+    bsky_post = f'Servus aus Tegernsee! \n\nDer Sonnenaufgang für Heute, {date}, war ungefähr {sunrise_local}. Und wie ist das Wetter? {climate} genau in diesem Moment mit einer Temperatur {temp}°C dass fühlt sich an wie {feels_like}°C. \n\nGenießen Sie das Sonnenlicht doch mal, weil der Sonnenuntergang ungefähr {sunset_local} wird.'
     
     client = Client()
     client.login('', '')
@@ -56,3 +56,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
